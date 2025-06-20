@@ -1,7 +1,7 @@
 from flask import Flask, request, jsonify
 app = Flask(__name__)
 
-@app.route('/rnn', methods=['POST'])
+@app.route('/rnn', methods=['GET', 'POST'])
 def rnn_predict():
     data = request.json
     text_input = data.get('text', '')
